@@ -1,0 +1,21 @@
+<h3 align= "center">
+  leavehistory works!
+</h3>
+
+<table border = "3" align= "center">  
+    <tr>
+      <th>leaId</th><th>leaNoOfDays</th><th>leaStDate</th><th>leaEndDate</th><th>leaType</th><th>leaAppOn</th><th>leaStatus</th>
+      <th>leaMngCmts</th><th>leaEmpId</th>
+    </tr>
+    <tr *ngFor="let u of leaveDetails1 | async">
+      <td>{{u.leaId}}</td>
+      <td>{{u.leaNoOfDays}}</td>
+      <td>{{u.leaStDate}}</td>
+      <td>{{u.leaEndDate}}</td>
+      <td>{{u.leaType}}</td>
+      <td>{{u.leaAppOn}}</td>
+      <td>{{u.leaStatus}}</td>
+      <td>{{u.leaMngCmts}}</td>
+      <td>{{u.leaEmpId}}</td>
+    </tr>
+    </table>

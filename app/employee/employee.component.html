@@ -1,0 +1,22 @@
+<h3 align="center">
+  Leave Management System
+</h3>
+<br/><br/>
+<table align="center" >
+  <tr>
+    <th><b>Employee ID</b></th><th><b>Full Name</b></th><th><b>Email Address</b></th><th><b>Mobile number</b></th><th><b>Date of Joining</b></th><th><b>Leave Balance</b></th><th><b>Department</b></th>
+    <th><b>Manager ID</b></th><th><b>Login</b></th>
+  </tr>
+  <tr *ngFor="let employee of emps | async">
+    <td>{{employee.empId}}</td>
+    <td>{{employee.empFullName}}</td>
+    <td>{{employee.empEmail}}</td>
+    <td>{{employee.empMobile}}</td>
+    <td>{{employee.empDOJ}}</td>
+    <td align="center">{{employee.empLeaveBal}}</td>
+    <td>{{employee.empDepart}}</td>
+    <td>{{employee.mgrId}}</td>
+    <input type = "button" value="login"  (click)="login(employee.empId,employee.mgrId)" />
+  </tr>
+</table>
+
